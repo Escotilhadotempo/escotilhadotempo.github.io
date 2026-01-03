@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
 
+<title>Aulas Particulares| Escotilha do Tempo</title>
+
+<style>
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*BODY*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f2e8de;
+  color: #333;
+  line-height: 1.6;
+}
+
+/*MENU*/
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: #1c1c1c;
+  padding: 12px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+
+.menu a:hover {
+  color: #ff7f00;
+}
+
+/*DROPDOWN*/
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #1c1c1c;
+  min-width: 220px;
+  z-index: 1000;
+}
+
+.submenu li a {
+  font-weight: normal;
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+/*CONTEÚDO*/
+main {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/*BOTÃO*/
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #25d366;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*FOOTER*/
+footer {
+  margin-top: 80px;
+  padding: 30px;
+  text-align: center;
+  background: #1c1c1c;
+  color: #fff;
+}
+</style>
+</head>
+
+<body>
+<header>
+<nav>
+<ul class="menu">
+
+  <li><a href="index.html">Início</a></li>
+
+  <li class="dropdown">
+    <a href="#">Serviços</a>
+    <ul class="submenu">
+      <li><a href="servicos-aulas.html">Aulas Particulares</a></li>
+      <li><a href="servicos-reforco.html">Reforço Escolar e ENEM</a></li>
+      <li><a href="servicos-consultoria.html">Consultoria</a></li>
+    </ul>
+  </li>
+
+  <li class="dropdown">
+    <a href="#">Períodos Históricos</a>
+    <ul class="submenu">
+      <li><a href="prehistoria.html">Pré-História</a></li>
+      <li><a href="antiguidade-oriental.html">Antiguidade Oriental</a></li>
+      <li><a href="antiguidade-classica.html">Antiguidade Clássica</a></li>
+    </ul>
+  </li>
+
+  <li><a href="faq.html">Perguntas Frequentes</a></li>
+  <li><a href="questoes.html">Questões Vestibulares</a></li>
+  <li><a href="sobre.html">Sobre</a></li>
+
+</ul>
+</nav>
+</header>
+<main>
+  <h1>Serviço oferecido por Prof. Alison — aulas online e consultorias voltadas ao aprendizado crítico e acessível de História.</h1>
+  <p>
+   Aulas Particulares de História
+    Aprenda História de um jeito leve, crítico e conectado ao seu dia a dia. As aulas particulares são personalizadas de acordo com o ritmo e as necessidades de cada aluno — seja para reforço escolar, recuperação de notas, preparação para o ENEM ou simplesmente por interesse em compreender o passado.
+    Durante os encontros, exploramos os principais temas da História Geral e do Brasil, relacionando fatos, ideias e contextos para tornar o aprendizado significativo.
+    As aulas acontecem de forma totalmente online, via Google Meet ou chamada de vídeo no WhatsApp — práticas, acessíveis e com acompanhamento próximo.
+    Quer começar agora? Agende sua aula e descubra um novo jeito de aprender História.
+  </p>
+  <a href="https://wa.me/SEUNUMERO" class="btn">Entrar em Contato</a>
+
+</main>
+
+<footer>
+© 2026 Escotilha do Tempo
+</footer>
+
+</body>
+</html>
