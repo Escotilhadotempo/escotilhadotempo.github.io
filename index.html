@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Escotilha do Tempo</title>
+
 <style>
-/* Reset básico */
 * { margin:0; padding:0; box-sizing:border-box; }
 
 body {
@@ -14,21 +14,21 @@ body {
     line-height: 1.6;
 }
 
-/* ===================== MENU ===================== */
+/* ===== MENU ===== */
 nav ul {
     list-style:none;
     display:flex;
     justify-content:center;
     align-items:center;
-    margin:0;
-    padding:0;
-    background-color:#1c1c1c;
+    background:#1c1c1c;
 }
-nav ul li { margin:0 10px; position:relative; }
+nav ul li {
+    position:relative;
+}
 nav ul li a {
     color:#fff;
+    padding:10px 15px;
     text-decoration:none;
-    padding:8px 15px;
     display:block;
 }
 nav ul li ul {
@@ -36,142 +36,159 @@ nav ul li ul {
     position:absolute;
     top:100%;
     left:0;
-    background-color:rgba(28,28,28,0.95);
-    padding:0;
-    border-radius:4px;
+    background:#1c1c1c;
     min-width:220px;
 }
-nav ul li ul li a { padding:10px 15px; }
-nav ul li:hover ul { display:block; }
-
-/* ===================== SEÇÕES ===================== */
-section { padding:80px 20px; max-width:1000px; margin:0 auto; }
-
-/* Sessão destaque */
-.sessao1 { border:2px dashed #ccc; background-color:#faf3e6; text-align:center; padding:40px; border-radius:8px; margin-bottom:40px; }
-.sessao1 p { font-size:18px; }
-
-/* Banner */
-.sessao2 { text-align:center; margin-bottom:40px; }
-.sessao2 img { max-width:100%; border-radius:8px; }
-
-/* Serviços / Aulas, Reforço e Consultoria */
-.sessao3 { background-color:#333; color:#fff; padding:60px 20px; border-radius:8px; margin-bottom:40px; }
-.sessao3 h2 { font-family:Helvetica, sans-serif; font-weight:bold; font-size:40px; margin-bottom:20px; text-align:center; }
-.sessao3 p { font-size:18px; margin-bottom:20px; text-align:center; }
-
-/* Botão WhatsApp */
-.btn-whatsapp {
-    display:inline-block;
-    background-color:#25d366;
-    color:#fff;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:8px;
-    font-weight:bold;
-    transition:0.3s;
+nav ul li:hover ul {
+    display:block;
 }
-.btn-whatsapp:hover { background-color:#1ebe57; }
+
+/* ===== SEÇÕES ===== */
+section {
+    max-width:1000px;
+    margin:80px auto;
+    padding:20px;
+}
+
+/* Serviços (cards resumo) */
+.servicos {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
+}
+
+.card {
+    background:#333;
+    color:#fff;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.card h3 {
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.card p {
+    margin-bottom:20px;
+}
+
+.card a {
+    display:inline-block;
+    background:#25d366;
+    color:#fff;
+    padding:10px 20px;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
 
 /* Footer */
-footer { background-color:#1c1c1c; color:#fff; text-align:center; padding:40px 20px; margin-top:60px; }
+footer {
+    background:#1c1c1c;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
 </style>
 </head>
+
 <body>
 
-<!-- ===================== CABEÇALHO / MENU ===================== -->
+<!-- ===== CABEÇALHO ===== -->
 <header>
-    <h1 style="text-align:center; padding:40px 0; font-size:60px; font-family:Georgia, serif;">Escotilha do Tempo</h1>
+    <h1 style="text-align:center; padding:40px 0; font-size:60px; font-family:Georgia, serif;">
+        Escotilha do Tempo
+    </h1>
+
     <nav>
         <ul>
-            <li><a href="#topo">INÍCIO</a></li>
+            <li><a href="index.html">INÍCIO</a></li>
 
             <!-- SERVIÇOS -->
             <li>
-                <a href="#">SERVIÇOS</a>
+                <a href="servicos.html">SERVIÇOS</a>
                 <ul>
-                    <li><a href="#sessao3">serviços-aula</a></li>
-                    <li><a href="#reforco">Reforço Escolar e ENEM</a></li>
-                    <li><a href="#consultoria">Consultoria</a></li>
+                    <li><a href="servicos-aulas.html">Aulas Particulares</a></li>
+                    <li><a href="servicos-reforco.html">Reforço Escolar e ENEM</a></li>
+                    <li><a href="servicos-consultoria.html">Consultoria</a></li>
                 </ul>
             </li>
 
             <!-- PERÍODOS HISTÓRICOS -->
             <li>
-    <a href="#">PERÍODOS HISTÓRICOS</a>
-    <ul>
-        <li><a href="prehistoria.html">Pré-História</a></li>
-        <li><a href="antiguidade_oriental.html">Antiguidade Oriental</a></li>
-        <li><a href="antiguidade_classica.html">Antiguidade Clássica</a></li>
-    </ul>
-</li>
+                <a href="#">PERÍODOS HISTÓRICOS</a>
+                <ul>
+                    <li><a href="prehistoria.html">Pré-História</a></li>
+                    <li><a href="antiguidade_oriental.html">Antiguidade Oriental</a></li>
+                    <li><a href="antiguidade_classica.html">Antiguidade Clássica</a></li>
+                </ul>
+            </li>
 
-            <li><a href="#faq">Perguntas Frequentes</a></li>
-            <li><a href="#questoes">Questões Vestibulares</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#contato" class="btn-menu" style="background-color:#ff7f00; padding:8px 20px; border-radius:6px; font-weight:bold; text-decoration:none;">Agendamentos Online</a></li>
+            <li><a href="faq.html">Perguntas Frequentes</a></li>
+            <li><a href="questoes.html">Questões Vestibulares</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html" style="background:#ff7f00; border-radius:6px;">
+                Agendamentos Online
+            </a></li>
         </ul>
     </nav>
 </header>
 
-<!-- ===================== SEÇÃO DE BOAS-VINDAS ===================== -->
-<section id="topo">
-    <h2 style="text-align:center; font-size:36px; margin-bottom:20px;">Boas Vindas à Escotilha do Tempo</h2>
-    <p style="text-align:center; max-width:800px; margin:0 auto 30px auto;">
-        Este é um espaço feito com dedicação para quem ama História — seja estudante, professor ou curioso pelo passado. Aqui você encontra resumos de conteúdos, artigos autorais e uma área especial para praticar com questões de vestibulares. Além disso, ofereço aulas de reforço em História, preparação para o ENEM e apoio em pesquisas.
+<!-- ===== BOAS-VINDAS ===== -->
+<section>
+    <h2 style="text-align:center; font-size:36px; margin-bottom:20px;">
+        Bem-vindo à Escotilha do Tempo
+    </h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        Um espaço dedicado ao ensino crítico e acessível de História, com aulas,
+        conteúdos e apoio acadêmico para estudantes de todos os níveis.
     </p>
 </section>
 
-<!-- ===================== SEÇÕES DE SERVIÇOS ===================== -->
-<section class="sessao1" id="sessao1">
-    <p>Serviço oferecido por Prof. Alison — aulas online e consultorias voltadas ao aprendizado crítico e acessível de História.</p>
+<!-- ===== RESUMO DOS SERVIÇOS ===== -->
+<section>
+    <h2 style="text-align:center; font-size:36px; margin-bottom:40px;">
+        Serviços Oferecidos
+    </h2>
+
+    <div class="servicos">
+
+        <div class="card">
+            <h3>Aulas Particulares</h3>
+            <p>
+                Aulas online personalizadas de História, focadas em compreensão,
+                contextualização e aprendizado significativo.
+            </p>
+            <a href="servicos-aulas.html">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <h3>Reforço Escolar & ENEM</h3>
+            <p>
+                Apoio estratégico para provas, recuperação escolar e preparação
+                completa para o ENEM.
+            </p>
+            <a href="servicos-reforco.html">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <h3>Consultoria Acadêmica</h3>
+            <p>
+                Orientação para pesquisas, TCCs e aprofundamento acadêmico
+                em História.
+            </p>
+            <a href="servicos-consultoria.html">Saiba mais</a>
+        </div>
+
+    </div>
 </section>
 
-<section class="sessao2" id="sessao2">
-    <img src="images/banner_servicos.jpg" alt="Banner de Serviços">
-</section>
-
-<section class="sessao3" id="sessao3">
-    <h2>Aulas Particulares de História</h2>
-    <p>Aprenda História de um jeito leve, crítico e conectado ao seu dia a dia. As aulas particulares são personalizadas de acordo com o ritmo e as necessidades de cada aluno — seja para reforço escolar, recuperação de notas, preparação para o ENEM ou simplesmente por interesse em compreender o passado.</p>
-    <p>Durante os encontros, exploramos os principais temas da História Geral e do Brasil, relacionando fatos, ideias e contextos para tornar o aprendizado significativo.</p>
-    <p>As aulas acontecem de forma totalmente online, via Google Meet ou chamada de vídeo no WhatsApp — práticas, acessíveis e com acompanhamento próximo.</p>
-    <p>Quer começar agora? Agende sua aula e descubra um novo jeito de aprender História.</p>
-    <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Entrar em Contato</a>
-</section>
-
-<section class="sessao3" id="reforco">
-    <h2>Reforço Escolar e Preparação para ENEM</h2>
-    <p>Apoio completo em conteúdos escolares e preparação estratégica para o ENEM. Aulas personalizadas com foco nos pontos que você mais precisa reforçar.</p>
-    <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Entrar em Contato</a>
-</section>
-
-<section class="sessao3" id="consultoria">
-    <h2>Consultoria Acadêmica em História</h2>
-    <p>Orientação e acompanhamento em projetos de pesquisa, TCCs e estudos avançados de História, com foco em metodologia e aprofundamento de conteúdo.</p>
-    <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Entrar em Contato</a>
-</section>
-
-<!-- ===================== SEÇÕES DE PERÍODOS HISTÓRICOS ===================== -->
-<section class="sessao3" id="prehistoria">
-    <h2>Pré-História</h2>
-    <p>Aqui você colocará o texto da Pré-História.</p>
-</section>
-
-<section class="sessao3" id="antiguidade_oriental">
-    <h2>Antiguidade Oriental</h2>
-    <p>Aqui você colocará o texto da Antiguidade Oriental.</p>
-</section>
-
-<section class="sessao3" id="antiguidade_classica">
-    <h2>Antiguidade Clássica</h2>
-    <p>Aqui você colocará o texto da Antiguidade Clássica.</p>
-</section>
-
-<!-- ===================== FOOTER ===================== -->
+<!-- ===== FOOTER ===== -->
 <footer>
     <p>&copy; 2026 Escotilha do Tempo. Todos os direitos reservados.</p>
 </footer>
 
 </body>
-</html
+</html>
