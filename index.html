@@ -149,35 +149,69 @@ body::before {
 </head>
 <body>
 
-<!-- Menu fixo -->
+<!-- Menu fixo com dropdown -->
 <nav>
-    <a href="index.html">Home</a>
-    <a href="sobre.html">Sobre</a>
-    <a href="servicos.html">Serviços</a>
-    <a href="contato.html" class="btn-menu">Aulas</a>
+    <ul style="list-style:none; display:flex; justify-content:center; align-items:center; margin:0; padding:0;">
+        <!-- INÍCIO -->
+        <li style="margin:0 10px;">
+            <a href="index.html" style="color:#fff; text-decoration:none; padding:8px 15px;">INÍCIO</a>
+        </li>
+
+        <!-- SERVIÇOS -->
+        <li style="margin:0 10px; position:relative;">
+            <a href="servicos.html" style="color:#fff; text-decoration:none; padding:8px 15px;">SERVIÇOS</a>
+            <ul style="display:none; position:absolute; top:100%; left:0; background-color:rgba(28,28,28,0.95); padding:0; border-radius:4px; min-width:220px;">
+                <li><a href="servicos.html#sessao3" style="display:block; padding:10px 15px; color:#fff; text-decoration:none;">Aulas Particulares</a></li>
+                <li><a href="servicos.html#reforco" style="display:block; padding:10px 15px; color:#fff; text-decoration:none;">Reforço Escolar e ENEM</a></li>
+                <li><a href="servicos.html#consultoria" style="display:block; padding:10px 15px; color:#fff; text-decoration:none;">Consultoria</a></li>
+            </ul>
+        </li>
+
+        <!-- PERÍODOS HISTÓRICOS -->
+        <li style="margin:0 10px; position:relative;">
+            <a href="periodos.html" style="color:#fff; text-decoration:none; padding:8px 15px;">PERÍODOS HISTÓRICOS</a>
+            <ul style="display:none; position:absolute; top:100%; left:0; background-color:rgba(28,28,28,0.95); padding:0; border-radius:4px; min-width:220px;">
+                <li><a href="periodos.html#prehistoria" style="display:block; padding:10px 15px; color:#fff; text-decoration:none;">Pré-História</a></li>
+                <li><a href="periodos.html#antiguidade_oriental" style="display:block; padding:10px 15px; color:#fff; text-decoration:none;">Antiguidade Oriental</a></li>
+                <li><a href="periodos.html#antiguidade_classica" style="display:block; padding:10px 15px; color:#fff; text-decoration:none;">Antiguidade Clássica</a></li>
+            </ul>
+        </li>
+
+        <!-- PERGUNTAS FREQUENTES -->
+        <li style="margin:0 10px;">
+            <a href="faq.html" style="color:#fff; text-decoration:none; padding:8px 15px;">Perguntas Frequentes</a>
+        </li>
+
+        <!-- QUESTÕES VESTIBULARES -->
+        <li style="margin:0 10px;">
+            <a href="questoes.html" style="color:#fff; text-decoration:none; padding:8px 15px;">Questões Vestibulares</a>
+        </li>
+
+        <!-- SOBRE -->
+        <li style="margin:0 10px;">
+            <a href="sobre.html" style="color:#fff; text-decoration:none; padding:8px 15px;">Sobre</a>
+        </li>
+
+        <!-- AGENDAMENTOS ONLINE -->
+        <li style="margin:0 10px;">
+            <a href="contato.html" class="btn-menu" style="background-color:#ff7f00; padding:8px 20px; border-radius:6px; font-weight:bold; text-decoration:none;">Agendamentos Online</a>
+        </li>
+    </ul>
 </nav>
 
-<header>
-    <h1>Boas Vindas à Escotilha do Tempo</h1>
-    <p>Um espaço dedicado para quem ama História — resumos, artigos, questões de vestibulares e aulas personalizadas online. Aprenda de forma leve, crítica e conectada com o presente.</p>
-    <a href="#contato" class="btn">Saiba Mais →</a>
-</header>
-
-<section id="sobre">
-    <h2>Professor de História — Aulas Particulares Online</h2>
-    <p>Aulas personalizadas para alunos do Ensino Fundamental, Médio e ENEM. Metodologia adaptada ao seu ritmo e estilo de aprendizagem.</p>
-</section>
-
-<section id="servicos">
-    <h2>Seus Recursos</h2>
-    <p>Resumos, artigos, questões de vestibulares, dicas de estudo e acompanhamento individualizado para potencializar seu aprendizado.</p>
-</section>
-
-<section id="contato">
-    <h2>Agende sua Aula</h2>
-    <p>Quer conversar ou agendar uma aula? Clique no botão abaixo e entre em contato!</p>
-    <a href="mailto:seuemail@exemplo.com" class="btn">Entrar em Contato</a>
-</section>
+<!-- Script simples para dropdown -->
+<script>
+document.querySelectorAll('nav li').forEach(function(li){
+    li.addEventListener('mouseenter', function(){
+        const dropdown = this.querySelector('ul');
+        if(dropdown) dropdown.style.display = 'block';
+    });
+    li.addEventListener('mouseleave', function(){
+        const dropdown = this.querySelector('ul');
+        if(dropdown) dropdown.style.display = 'none';
+    });
+});
+</script>
 
 <footer>
     <p>&copy; 2026 Escotilha do Tempo. Todos os direitos reservados. <a href="#sobre">Topo</a></p>
