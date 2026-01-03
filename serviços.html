@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Serviços - Escotilha do Tempo</title>
+<style>
+/* Reset básico */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f9f5f0;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Menu fixo com dropdown */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(28,28,28,0.95);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    z-index: 999;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    display: block;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff7f00;
+}
+
+/* Dropdown */
+nav li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(28,28,28,0.95);
+    padding: 0;
+    min-width: 200px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+nav li:hover ul {
+    display: block;
+}
+
+nav li ul li a {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+nav li ul li a:hover {
+    background-color: #ff7f00;
+}
+
+/* Botão destaque */
+nav a.btn-menu {
+    background-color: #ff7f00;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+nav a.btn-menu:hover {
+    background-color: #e06b00;
+}
+
+/* Seções */
+section {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+/* Sessão 1 - Box de Destaque */
+.sessao1 {
+    border: 2px dashed #ccc;
+    padding: 50px 20px;
+    margin-bottom: 40px;
+    background-color: #fffdf8;
+}
+
+.sessao1 p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Sessão 2 - Banner */
+.sessao2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Sessão 3 - Aulas Particulares */
+.sessao3 {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 80px 20px;
+    border-radius: 10px;
+}
+
+.sessao3 h2 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.sessao3 p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botões */
+.btn, .btn-whatsapp {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 18px;
+    background-color: #25d366; /* verde WhatsApp */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    margin-left: 10px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.btn:hover {
+    background-color: #e06b00;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer a {
+    color: #ff7f00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Espaço para menu fixo */
+body::before {
+    content: "";
+    display: block;
+    height: 70px; /* altura do menu */
+}
+
+/* Widget de chat flutuante */
+#chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+#chat-widget:hover {
+    background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+
+<!-- Menu fixo com dropdown -->
+<nav>
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li>
+            <a href="servicos.html">Serviços</a>
+            <ul>
+                <li><a href="#sessao1">Destaque</a></li>
+                <li><a href="#sessao2">Banner</a></li>
+                <li><a href="#sessao3">Aulas Particulares</a></li>
+            </ul>
+        </li>
+        <li><a href="faq.html">Perguntas Frequentes</a></li>
+        <li><a href="questoes.html">Questões Vestibulares</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html" class="btn-menu">Agendamentos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </ul>
+</nav>
+
+<!-- Sessão 1 - Box de Destaque -->
+<section class="sessao1" id="sessao1">
+    <p>Serviço oferecido por Prof. Alison — aulas online e consultorias voltadas ao aprendizado crítico e acessível de História.</p>
+</section>
+
+<!-- Sessão 2 - Banner Visual -->
+<section class="sessao2" id="sessao2">
+    <img src="images/banner_servicos.jpg" alt="Banner de Serviços">
+</section>
+
+<!-- Sessão 3 - Aulas Particulares -->
+<section class="sessao3" id="sessao3">
+    <h2>Aulas Particulares de História</h2>
+    <p>Aprenda História de um jeito leve, crítico e conectado ao seu dia a dia. As aulas particulares são personalizadas de acordo com o ritmo e as necessidades de cada aluno — seja para reforço escolar, recuperação de notas, preparação para o ENEM ou simplesmente por interesse em compreender o passado.  
+    Durante os encontros, exploramos os principais temas da História Geral e do Brasil, relacionando fatos, ideias e contextos para tornar o aprendizado significativo.  
+    As aulas acontecem de forma totalmente online, via Google Meet ou chamada de vídeo no WhatsApp — práticas, acessíveis e com acompanhamento próximo.  
+    Quer começar agora? Agende sua aula e descubra um novo jeito de aprender História.</p>
+    <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">Entrar em Contato</a>
+</section>
+
+<!-- Widget de Chat Flutuante -->
+<div id="chat-widget">Vamos conversar por chat</div>
+
+<footer>
+    <p>&copy; 2026 Escotilha do Tempo. Todos os direitos reservados. <a href="index.html">Topo</a></p>
+</footer>
+
+</body>
+</html>
