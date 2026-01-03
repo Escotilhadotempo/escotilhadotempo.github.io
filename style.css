@@ -33,45 +33,51 @@ body {
     gap: 30px;
 }
 
+.menu ul li {
+    position: relative;
+}
+
 .menu a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    padding: 10px;
+    display: block;
 }
 
 .menu a:hover {
     color: #ff7f00;
 }
 
-/* DROPDOWN */
-.dropdown {
-    position: relative;
-}
-
+/* SUBMENU (FECHADO POR PADRÃO) */
 .submenu {
     display: none;
     position: absolute;
-    background-color: #333;
     top: 100%;
     left: 0;
-    padding: 10px 0;
+    background-color: #333;
     min-width: 220px;
+    z-index: 999;
 }
 
+/* ITENS DO SUBMENU */
 .submenu li {
-    padding: 8px 20px;
+    width: 100%;
 }
 
 .submenu li a {
-    color: #fff;
+    padding: 10px 20px;
     font-weight: normal;
+    color: #fff;
+    white-space: nowrap;
 }
 
 .submenu li a:hover {
     background-color: #444;
 }
 
-.dropdown:hover .submenu {
+/* ABRE APENAS NO HOVER DO ITEM PAI */
+.dropdown:hover > .submenu {
     display: block;
 }
 
