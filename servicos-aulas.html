@@ -2,148 +2,178 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-
-<title>Aulas Particulares| Escotilha do Tempo</title>
+<title>Aulas Particulares | Escotilha do Tempo</title>
 
 <style>
-/*RESET*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; }
 
-/*BODY*/
+/* BASE */
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #f2e8de;
-  color: #333;
-  line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+    background:#f2e8de;
+    color:#333;
+    line-height:1.6;
 }
 
-/*MENU*/
-.menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  background: #1c1c1c;
-  padding: 12px;
+/* ================= MENU UNIVERSAL ================= */
+header {
+    background:#1c1c1c;
 }
 
-.menu li {
-  position: relative;
+header h1 {
+    color:#fff;
+    text-align:center;
+    padding:30px 0;
+    font-family:Georgia, serif;
+    font-size:48px;
 }
 
-.menu a {
-  color: #fff;
-  padding: 10px 15px;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
+nav ul {
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:10px 0;
 }
 
-.menu a:hover {
-  color: #ff7f00;
+nav ul li {
+    position:relative;
 }
 
-/*DROPDOWN*/
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #1c1c1c;
-  min-width: 220px;
-  z-index: 1000;
+nav ul li a {
+    color:#fff;
+    padding:10px 15px;
+    text-decoration:none;
+    display:block;
+    font-weight:bold;
 }
 
-.submenu li a {
-  font-weight: normal;
+nav ul li ul {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#1c1c1c;
+    min-width:220px;
 }
 
-.dropdown:hover .submenu {
-  display: block;
+nav ul li ul li a {
+    padding:10px 15px;
+    font-weight:normal;
 }
 
-/*CONTEÚDO*/
-main {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 40px;
-  background: #fff;
-  border-radius: 8px;
+nav ul li:hover ul {
+    display:block;
 }
 
-/*BOTÃO*/
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  background: #25d366;
-  color: #fff;
-  padding: 12px 25px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
+/* ================= CONTEÚDO ================= */
+section {
+    max-width:900px;
+    margin:80px auto;
+    padding:40px;
+    background:#fff;
+    border-radius:10px;
 }
 
-/*FOOTER*/
+section h2 {
+    font-size:38px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+section p {
+    font-size:18px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+/* BOTÃO */
+.btn-whatsapp {
+    display:inline-block;
+    margin-top:20px;
+    background:#25d366;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.btn-whatsapp:hover {
+    background:#1ebe57;
+}
+
+/* FOOTER */
 footer {
-  margin-top: 80px;
-  padding: 30px;
-  text-align: center;
-  background: #1c1c1c;
-  color: #fff;
+    background:#1c1c1c;
+    color:#fff;
+    text-align:center;
+    padding:30px;
+    margin-top:80px;
 }
 </style>
 </head>
 
 <body>
+
 <header>
-<nav>
-<ul>
-
-    <li><a href="index.html">INÍCIO</a></li>
-
-    <li>
-        <a href="#">SERVIÇOS</a>
+    <h1>Escotilha do Tempo</h1>
+    <nav>
         <ul>
-            <li><a href="servicos-aulas.html">Aulas Particulares</a></li>
-            <li><a href="servicos-reforco.html">Reforço Escolar e ENEM</a></li>
-            <li><a href="servicos-consultoria.html">Consultoria</a></li>
+            <li><a href="index.html">Início</a></li>
+
+            <li>
+                <a href="#">Serviços</a>
+                <ul>
+                    <li><a href="servicos-aulas.html">Aulas Particulares</a></li>
+                    <li><a href="servicos-reforco.html">Reforço Escolar e ENEM</a></li>
+                    <li><a href="servicos-consultoria.html">Consultoria</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Períodos Históricos</a>
+                <ul>
+                    <li><a href="prehistoria.html">Pré-História</a></li>
+                    <li><a href="antiguidade_oriental.html">Antiguidade Oriental</a></li>
+                    <li><a href="antiguidade_classica.html">Antiguidade Clássica</a></li>
+                </ul>
+            </li>
+
+            <li><a href="faq.html">Perguntas Frequentes</a></li>
+            <li><a href="questoes.html">Questões Vestibulares</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
         </ul>
-    </li>
-
-    <li>
-        <a href="#">PERÍODOS HISTÓRICOS</a>
-        <ul>
-            <li><a href="prehistoria.html">Pré-História</a></li>
-            <li><a href="antiguidade_oriental.html">Antiguidade Oriental</a></li>
-            <li><a href="antiguidade_classica.html">Antiguidade Clássica</a></li>
-        </ul>
-    </li>
-
-    <li><a href="faq.html">Perguntas Frequentes</a></li>
-    <li><a href="questoes.html">Questões Vestibulares</a></li>
-    <li><a href="sobre.html">Sobre</a></li>
-
-</ul>
-</nav>
+    </nav>
 </header>
-<main>
-  <h1>Serviço oferecido por Prof. Alison — aulas online e consultorias voltadas ao aprendizado crítico e acessível de História.</h1>
-  <p>
-   Aulas Particulares de História
-    Aprenda História de um jeito leve, crítico e conectado ao seu dia a dia. As aulas particulares são personalizadas de acordo com o ritmo e as necessidades de cada aluno — seja para reforço escolar, recuperação de notas, preparação para o ENEM ou simplesmente por interesse em compreender o passado.
-    Durante os encontros, exploramos os principais temas da História Geral e do Brasil, relacionando fatos, ideias e contextos para tornar o aprendizado significativo.
-    As aulas acontecem de forma totalmente online, via Google Meet ou chamada de vídeo no WhatsApp — práticas, acessíveis e com acompanhamento próximo.
-    Quer começar agora? Agende sua aula e descubra um novo jeito de aprender História.
-  </p>
-  <a href="https://wa.me/SEUNUMERO" class="btn">Entrar em Contato</a>
 
-</main>
+<section>
+    <h2>Aulas Particulares de História</h2>
+
+    <p>
+        Aprenda História de um jeito leve, crítico e conectado ao seu dia a dia.
+        As aulas são personalizadas de acordo com o ritmo e as necessidades de cada aluno.
+    </p>
+
+    <p>
+        Atuação em reforço escolar, ENEM e aprofundamento em História Geral e do Brasil,
+        sempre conectando passado e presente.
+    </p>
+
+    <p>
+        As aulas acontecem 100% online, via Google Meet ou WhatsApp.
+    </p>
+
+    <div style="text-align:center;">
+        <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp">
+            Entrar em Contato
+        </a>
+    </div>
+</section>
 
 <footer>
-© 2026 Escotilha do Tempo
+    © 2026 Escotilha do Tempo
 </footer>
 
 </body>
