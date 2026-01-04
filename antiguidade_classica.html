@@ -7,89 +7,90 @@
 <style>
 /* ================= RESET ================= */
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* ================= BASE ================= */
 body {
-    font-family:'Open Sans', sans-serif;
-    background:#f2e8de;
-    color:#333;
+    font-family: 'Open Sans', sans-serif;
+    background: #f2e8de;
+    color: #333;
 }
 
 /* ================= MENU UNIVERSAL ================= */
 .topo {
-    background:#1c1c1c; /* FAIXA PRETA */
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:1000;
-    transition:top 0.3s ease;
+    background: #1c1c1c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease;
 }
 
 .topo nav ul {
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:14px 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0;
 }
 
 .topo nav ul li {
-    position:relative;
+    position: relative;
 }
 
 .topo nav ul li a {
-    color:#fff;
-    text-decoration:none;
-    padding:10px 15px;
-    font-weight:bold;
-    display:block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    display: block;
 }
 
+/* Dropdown */
 .topo nav ul li ul {
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    background:#1c1c1c;
-    min-width:220px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1c1c1c;
+    min-width: 220px;
 }
 
 .topo nav ul li ul li a {
-    font-weight:normal;
+    font-weight: normal;
 }
 
 .topo nav ul li:hover ul {
-    display:block;
+    display: block;
 }
 
 /* ================= CONTEÚDO ================= */
 section {
-    max-width:900px;
-    margin:140px auto 80px;
-    padding:40px;
+    max-width: 900px;
+    margin: 140px auto 80px;
+    padding: 40px;
 }
 
 section h1 {
-    font-family:Georgia, serif;
-    font-size:42px;
-    margin-bottom:20px;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin-bottom: 20px;
 }
 
 section p {
-    font-size:18px;
-    line-height:1.7;
+    font-size: 18px;
+    line-height: 1.7;
 }
 
 /* ================= FOOTER ================= */
 footer {
-    background:#1c1c1c;
-    color:#fff;
-    text-align:center;
-    padding:30px;
+    background: #1c1c1c;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
 }
 </style>
 </head>
@@ -98,40 +99,42 @@ footer {
 
 <!-- ================= HEADER ================= -->
 <header class="topo">
-<nav>
-<ul>
-    <li><a href="index.html">INÍCIO</a></li>
-
-    <li>
-        <a href="#">SERVIÇOS</a>
+    <nav>
         <ul>
-            <li><a href="servicos-aulas.html">Aulas Particulares</a></li>
-            <li><a href="servicos-reforco.html">Reforço Escolar e ENEM</a></li>
-            <li><a href="servicos-consultoria.html">Consultoria</a></li>
-        </ul>
-    </li>
+            <li><a href="index.html">INÍCIO</a></li>
 
-    <li>
-        <a href="#">PERÍODOS HISTÓRICOS</a>
-        <ul>
-            <li><a href="prehistoria.html">Pré-História</a></li>
-            <li><a href="antiguidade_oriental.html">Antiguidade Oriental</a></li>
-            <li><a href="antiguidade_classica.html">Antiguidade Clássica</a></li>
-        </ul>
-    </li>
+            <li>
+                <a href="#">SERVIÇOS</a>
+                <ul>
+                    <li><a href="servicos-aulas.html">Aulas Particulares</a></li>
+                    <li><a href="servicos-reforco.html">Reforço Escolar e ENEM</a></li>
+                    <li><a href="servicos-consultoria.html">Consultoria</a></li>
+                </ul>
+            </li>
 
-    <li><a href="faq.html">Perguntas Frequentes</a></li>
-    <li><a href="questoes.html">Questões Vestibulares</a></li>
-    <li><a href="sobre.html">Sobre</a></li>
-</ul>
-</nav>
+            <li>
+                <a href="#">PERÍODOS HISTÓRICOS</a>
+                <ul>
+                    <li><a href="prehistoria.html">Pré-História</a></li>
+                    <li><a href="antiguidade_oriental.html">Antiguidade Oriental</a></li>
+                    <li><a href="antiguidade_classica.html">Antiguidade Clássica</a></li>
+                </ul>
+            </li>
+
+            <li><a href="faq.html">Perguntas Frequentes</a></li>
+            <li><a href="questoes.html">Questões Vestibulares</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
 </header>
 
 <!-- ================= CONTEÚDO ================= -->
 <section>
     <h1>Antiguidade Clássica</h1>
     <p>
-        Aqui iremos abordar os principais acontecimentos históricos da formação da sociedade grega e romana no início da Antiguidade denominada greco-romana.
+        Aqui iremos abordar os principais acontecimentos históricos da formação
+        da sociedade grega e romana no início da Antiguidade denominada
+        greco-romana.
     </p>
 </section>
 
@@ -140,23 +143,8 @@ footer {
     © 2026 Escotilha do Tempo
 </footer>
 
-<!-- ================= SCRIPT MENU INTELIGENTE ================= -->
-<script>
-let lastScrollTop = 0;
-const header = document.querySelector(".topo");
-
-window.addEventListener("scroll", function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-        header.style.top = "-90px"; // some ao descer
-    } else {
-        header.style.top = "0"; // aparece ao subir
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
-</script>
+<!-- ================= JS MENU INTELIGENTE ================= -->
+<script src="js/menu.js"></script>
 
 </body>
 </html>
