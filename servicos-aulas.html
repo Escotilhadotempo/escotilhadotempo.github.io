@@ -20,82 +20,70 @@ body {
     line-height: 1.6;
 }
 
-/* ================= HEADER / MENU ================= */
-header {
+/* ===== TOPO FINO PADRÃO ===== */
+.topo {
     background: #1c1c1c;
+    padding: 10px 0;
 }
 
-/* TÍTULO MAIS FINO */
-header h1 {
-    color: #fff;
-    text-align: center;
-    padding: 14px 0;        /* ↓ antes era 30px */
-    font-family: Georgia, serif;
-    font-size: 34px;        /* ↓ antes era 48px */
-    margin: 0;
-}
-
-/* NAV */
-nav ul {
+.topo nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6px 0;         /* ↓ menu mais compacto */
+    gap: 24px;
 }
 
-nav ul li {
+.topo nav ul li {
     position: relative;
 }
 
-nav ul li a {
+.topo nav ul li a {
     color: #fff;
-    padding: 6px 12px;      /* ↓ links mais finos */
     text-decoration: none;
-    display: block;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 8px;
 }
 
 /* SUBMENU */
-nav ul li ul {
+.topo nav ul li ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     background: #1c1c1c;
-    min-width: 220px;
-    z-index: 999;
+    min-width: 200px;
+    z-index: 1000;
 }
 
-nav ul li ul li a {
-    padding: 8px 14px;
-    font-weight: normal;
-    font-size: 14px;
+.topo nav ul li ul li a {
+    display: block;
+    padding: 8px 12px;
+    font-size: 13px;
 }
 
-nav ul li:hover ul {
+.topo nav ul li:hover ul {
     display: block;
 }
 
-/* ================= CONTEÚDO ================= */
+/* ===== CONTEÚDO ===== */
 section {
     max-width: 900px;
-    margin: 60px auto;     /* ↓ menos espaço vertical */
+    margin: 80px auto;
     padding: 40px;
     background: #fff;
     border-radius: 10px;
 }
 
-section h2 {
-    font-size: 34px;
+section h1 {
+    font-size: 38px;
     margin-bottom: 20px;
     text-align: center;
 }
 
 section p {
-    font-size: 17px;
-    margin-bottom: 18px;
+    font-size: 18px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -120,24 +108,22 @@ footer {
     background: #1c1c1c;
     color: #fff;
     text-align: center;
-    padding: 22px;
-    margin-top: 60px;
-    font-size: 14px;
+    padding: 30px;
+    margin-top: 80px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Escotilha do Tempo</h1>
-
+<!-- ===== MENU ===== -->
+<header class="topo">
     <nav>
         <ul>
-            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html">INÍCIO</a></li>
 
             <li>
-                <a href="#">Serviços</a>
+                <a href="#">SERVIÇOS</a>
                 <ul>
                     <li><a href="servicos-aulas.html">Aulas Particulares</a></li>
                     <li><a href="servicos-reforco.html">Reforço Escolar e ENEM</a></li>
@@ -146,7 +132,7 @@ footer {
             </li>
 
             <li>
-                <a href="#">Períodos Históricos</a>
+                <a href="#">PERÍODOS HISTÓRICOS</a>
                 <ul>
                     <li><a href="prehistoria.html">Pré-História</a></li>
                     <li><a href="antiguidade_oriental.html">Antiguidade Oriental</a></li>
@@ -161,8 +147,9 @@ footer {
     </nav>
 </header>
 
+<!-- ===== CONTEÚDO ===== -->
 <section>
-    <h2>Aulas Particulares de História</h2>
+    <h1>Aulas Particulares de História</h1>
 
     <p>
         Aprenda História de um jeito leve, crítico e conectado ao seu dia a dia.
