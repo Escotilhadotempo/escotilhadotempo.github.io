@@ -1,23 +1,32 @@
+index.html
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Antiguidade Oriental | Escotilha do Tempo</title>
+<title>Escotilha do Tempo</title>
+
 <style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
 body {
     font-family: 'Open Sans', sans-serif;
-    background:#f2e8de;
-    margin:0;
-    color:#333;
+    background-color: #f2e8de;
+    color: #333;
+    line-height: 1.6;
 }
+
+/* ===== MENU ===== */
 nav ul {
     list-style:none;
     display:flex;
     justify-content:center;
+    align-items:center;
     background:#1c1c1c;
-    padding:10px;
 }
-nav ul li { position:relative; }
+nav ul li {
+    position:relative;
+}
 nav ul li a {
     color:#fff;
     padding:10px 15px;
@@ -27,29 +36,69 @@ nav ul li a {
 nav ul li ul {
     display:none;
     position:absolute;
+    top:100%;
+    left:0;
     background:#1c1c1c;
+    min-width:220px;
 }
-nav ul li:hover ul { display:block; }
+nav ul li:hover ul {
+    display:block;
+}
 
+/* ===== SEÇÕES ===== */
 section {
-    max-width:900px;
+    max-width:1000px;
     margin:80px auto;
     padding:20px;
 }
-h1 {
-    font-family:Georgia, serif;
-    font-size:42px;
+
+/* Serviços (cards resumo) */
+.servicos {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:30px;
+}
+
+.card {
+    background:#333;
+    color:#fff;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.card h3 {
+    font-size:26px;
+    margin-bottom:15px;
+}
+
+.card p {
     margin-bottom:20px;
 }
+
+.card a {
+    display:inline-block;
+    background:#25d366;
+    color:#fff;
+    padding:10px 20px;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+/* Footer */
 footer {
     background:#1c1c1c;
     color:#fff;
     text-align:center;
-    padding:30px;
+    padding:40px 20px;
 }
 </style>
 </head>
+
 <body>
+
+<!-- ===== CABEÇALHO ===== -->
 <header>
 <nav>
 <ul>
@@ -81,17 +130,60 @@ footer {
 </ul>
 </nav>
 </header>
+
+<!-- ===== BOAS-VINDAS ===== -->
 <section>
-    <h1>Antiguidade Oriental</h1>
-    <p>
-        Aqui você desenvolverá todo o conteúdo sobre a antiguidade oriental.
-        Podemos dividir este grande período de acordo com as respectivas civilizações,
-        e seus modos de produção e organização social. Vamos Nessa ?
+    <h2 style="text-align:center; font-size:36px; margin-bottom:20px;">
+        Bem-vindo à Escotilha do Tempo
+    </h2>
+    <p style="text-align:center; max-width:800px; margin:auto;">
+        Um espaço dedicado ao ensino crítico e acessível de História, com aulas,
+        conteúdos e apoio acadêmico para estudantes de todos os níveis.
     </p>
 </section>
 
+<!-- ===== RESUMO DOS SERVIÇOS ===== -->
+<section>
+    <h2 style="text-align:center; font-size:36px; margin-bottom:40px;">
+        Serviços Oferecidos
+    </h2>
+
+    <div class="servicos">
+
+        <div class="card">
+            <h3>Aulas Particulares</h3>
+            <p>
+                Aulas online personalizadas de História, focadas em compreensão,
+                contextualização e aprendizado significativo.
+            </p>
+            <a href="servicos-aulas.html">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <h3>Reforço Escolar & ENEM</h3>
+            <p>
+                Apoio estratégico para provas, recuperação escolar e preparação
+                completa para o ENEM.
+            </p>
+            <a href="servicos-reforco.html">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <h3>Consultoria Acadêmica</h3>
+            <p>
+                Orientação para pesquisas, TCCs e aprofundamento acadêmico
+                em História.
+            </p>
+            <a href="servicos-consultoria.html">Saiba mais</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
 <footer>
-    © 2026 Escotilha do Tempo
+    <p>&copy; 2026 Escotilha do Tempo. Todos os direitos reservados.</p>
 </footer>
+
 </body>
 </html>
