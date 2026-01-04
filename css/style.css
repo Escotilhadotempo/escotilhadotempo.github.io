@@ -1,1 +1,87 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* ================= BASE ================= */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f2e8de;
+    color: #333;
+}
+
+/* ================= MENU FIXO ================= */
+.topo {
+    background: #1c1c1c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+.topo nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.topo nav ul li {
+    position: relative;
+}
+
+.topo nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    display: block;
+}
+
+.topo nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1c1c1c;
+    min-width: 220px;
+}
+
+.topo nav ul li ul li a {
+    font-weight: normal;
+}
+
+.topo nav ul li:hover ul {
+    display: block;
+}
+
+/* ================= CONTEÚDO ================= */
+section {
+    max-width: 900px;
+    margin: 140px auto;
+    padding: 40px;
+}
+
+section h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #1c1c1c;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    margin-top: 80px;
+}
