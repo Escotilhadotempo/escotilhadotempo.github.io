@@ -5,8 +5,14 @@
 <title>Escotilha do Tempo</title>
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* ================= BASE ================= */
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #f2e8de;
@@ -14,122 +20,139 @@ body {
     line-height: 1.6;
 }
 
-/* ===== MENU ===== */
-nav ul {
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#1c1c1c;
-}
-nav ul li {
-    position:relative;
-}
-nav ul li a {
-    color:#fff;
-    padding:10px 15px;
-    text-decoration:none;
-    display:block;
-}
-nav ul li ul {
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    background:#1c1c1c;
-    min-width:220px;
-}
-nav ul li:hover ul {
-    display:block;
+/* ================= MENU UNIVERSAL ================= */
+.topo {
+    background: #1c1c1c;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease;
 }
 
-/* ===== SEÇÕES ===== */
+.topo nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.topo nav ul li {
+    position: relative;
+}
+
+.topo nav ul li a {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+/* Dropdown */
+.topo nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1c1c1c;
+    min-width: 220px;
+}
+
+.topo nav ul li ul li a {
+    font-weight: normal;
+}
+
+.topo nav ul li:hover ul {
+    display: block;
+}
+
+/* ================= SEÇÕES ================= */
 section {
-    max-width:1000px;
-    margin:80px auto;
-    padding:20px;
+    max-width: 1000px;
+    margin: 140px auto 80px;
+    padding: 20px;
 }
 
-/* Serviços (cards resumo) */
+/* ================= SERVIÇOS (CARDS) ================= */
 .servicos {
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap:30px;
+    gap: 30px;
 }
 
 .card {
-    background:#333;
-    color:#fff;
-    padding:30px;
-    border-radius:10px;
-    text-align:center;
+    background: #333;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .card h3 {
-    font-size:26px;
-    margin-bottom:15px;
+    font-size: 26px;
+    margin-bottom: 15px;
 }
 
 .card p {
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .card a {
-    display:inline-block;
-    background:#25d366;
-    color:#fff;
-    padding:10px 20px;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:bold;
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
-/* Footer */
+/* ================= FOOTER ================= */
 footer {
-    background:#1c1c1c;
-    color:#fff;
-    text-align:center;
-    padding:40px 20px;
+    background: #1c1c1c;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- ===== CABEÇALHO ===== -->
-<header>
-<nav>
-<ul>
-
-    <li><a href="index.html">INÍCIO</a></li>
-
-    <li>
-        <a href="#">SERVIÇOS</a>
+<!-- ================= HEADER ================= -->
+<header class="topo">
+    <nav>
         <ul>
-            <li><a href="servicos-aulas.html">Aulas Particulares</a></li>
-            <li><a href="servicos-reforco.html">Reforço Escolar e ENEM</a></li>
-            <li><a href="servicos-consultoria.html">Consultoria</a></li>
+            <li><a href="index.html">INÍCIO</a></li>
+
+            <li>
+                <a href="#">SERVIÇOS</a>
+                <ul>
+                    <li><a href="servicos-aulas.html">Aulas Particulares</a></li>
+                    <li><a href="servicos-reforco.html">Reforço Escolar e ENEM</a></li>
+                    <li><a href="servicos-consultoria.html">Consultoria</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">PERÍODOS HISTÓRICOS</a>
+                <ul>
+                    <li><a href="prehistoria.html">Pré-História</a></li>
+                    <li><a href="antiguidade_oriental.html">Antiguidade Oriental</a></li>
+                    <li><a href="antiguidade_classica.html">Antiguidade Clássica</a></li>
+                </ul>
+            </li>
+
+            <li><a href="faq.html">Perguntas Frequentes</a></li>
+            <li><a href="questoes.html">Questões Vestibulares</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
         </ul>
-    </li>
-
-    <li>
-        <a href="#">PERÍODOS HISTÓRICOS</a>
-        <ul>
-            <li><a href="prehistoria.html">Pré-História</a></li>
-            <li><a href="antiguidade_oriental.html">Antiguidade Oriental</a></li>
-            <li><a href="antiguidade_classica.html">Antiguidade Clássica</a></li>
-        </ul>
-    </li>
-
-    <li><a href="faq.html">Perguntas Frequentes</a></li>
-    <li><a href="questoes.html">Questões Vestibulares</a></li>
-    <li><a href="sobre.html">Sobre</a></li>
-
-</ul>
-</nav>
+    </nav>
 </header>
 
-<!-- ===== BOAS-VINDAS ===== -->
+<!-- ================= BOAS-VINDAS ================= -->
 <section>
     <h2 style="text-align:center; font-size:36px; margin-bottom:20px;">
         Bem-vindo à Escotilha do Tempo
@@ -140,7 +163,7 @@ footer {
     </p>
 </section>
 
-<!-- ===== RESUMO DOS SERVIÇOS ===== -->
+<!-- ================= SERVIÇOS ================= -->
 <section>
     <h2 style="text-align:center; font-size:36px; margin-bottom:40px;">
         Serviços Oferecidos
@@ -178,10 +201,13 @@ footer {
     </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- ================= FOOTER ================= -->
 <footer>
     <p>&copy; 2026 Escotilha do Tempo. Todos os direitos reservados.</p>
 </footer>
+
+<!-- ================= MENU INTELIGENTE ================= -->
+<script src="js/menu.js"></script>
 
 </body>
 </html>
