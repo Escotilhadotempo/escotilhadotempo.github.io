@@ -6,10 +6,10 @@ window.addEventListener('scroll', () => {
 
     if (scrollAtual > ultimoScroll && scrollAtual > 100) {
         // rolando para baixo → esconde menu
-        topo.style.top = "-120px";
+        topo.classList.add('menu-hide');
     } else {
         // rolando para cima → mostra menu
-        topo.style.top = "0";
+        topo.classList.remove('menu-hide');
     }
 
     ultimoScroll = scrollAtual;
