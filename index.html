@@ -4,122 +4,10 @@
 <meta charset="UTF-8">
 <title>Escotilha do Tempo</title>
 
-<style>
-/* ================= RESET ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ================= BASE ================= */
-body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f2e8de;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* ================= MENU UNIVERSAL ================= */
-.topo {
-    background: #1c1c1c;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    transition: top 0.3s ease;
-}
-
-.topo nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 14px 0;
-}
-
-.topo nav ul li {
-    position: relative;
-}
-
-.topo nav ul li a {
-    color: #fff;
-    padding: 10px 15px;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-}
-
-/* Dropdown */
-.topo nav ul li ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #1c1c1c;
-    min-width: 220px;
-}
-
-.topo nav ul li ul li a {
-    font-weight: normal;
-}
-
-.topo nav ul li:hover ul {
-    display: block;
-}
-
-/* ================= SEÇÕES ================= */
-section {
-    max-width: 1000px;
-    margin: 140px auto 80px;
-    padding: 20px;
-}
-
-/* ================= SERVIÇOS (CARDS) ================= */
-.servicos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    background: #333;
-    color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.card h3 {
-    font-size: 26px;
-    margin-bottom: 15px;
-}
-
-.card p {
-    margin-bottom: 20px;
-}
-
-.card a {
-    display: inline-block;
-    background: #25d366;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
-
-/* ================= FOOTER ================= */
-footer {
-    background: #1c1c1c;
-    color: #fff;
-    text-align: center;
-    padding: 40px 20px;
-}
-</style>
+<!-- ================= CSS EXTERNO ================= -->
+<link rel="stylesheet" href="css/style.css">
 </head>
-
-<body>
+<body class="home">
 
 <!-- ================= HEADER ================= -->
 <header class="topo">
@@ -152,19 +40,28 @@ footer {
     </nav>
 </header>
 
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <div class="hero-conteudo">
+        <h1>Bem-vindo ao Escotilha do Tempo</h1>
+        <p>Um espaço dedicado ao ensino crítico e acessível de História, com aulas e conteúdos para todos os níveis.</p>
+        <a href="#servicos" class="btn-acao">Conheça Nossos Serviços</a>
+    </div>
+</section>
+
 <!-- ================= BOAS-VINDAS ================= -->
 <section>
     <h2 style="text-align:center; font-size:36px; margin-bottom:20px;">
-        Bem-vindo à Escotilha do Tempo
+        Ensino de História de Forma Clara e Estratégica
     </h2>
     <p style="text-align:center; max-width:800px; margin:auto;">
-        Um espaço dedicado ao ensino crítico e acessível de História, com aulas,
-        conteúdos e apoio acadêmico para estudantes de todos os níveis.
+        Nosso objetivo é oferecer aprendizado significativo, contextualização histórica e apoio acadêmico
+        completo para estudantes do Ensino Fundamental, Médio e ENEM.
     </p>
 </section>
 
 <!-- ================= SERVIÇOS ================= -->
-<section>
+<section id="servicos">
     <h2 style="text-align:center; font-size:36px; margin-bottom:40px;">
         Serviços Oferecidos
     </h2>
