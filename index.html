@@ -6,6 +6,150 @@
 
 <!-- ================= CSS EXTERNO ================= -->
 <link rel="stylesheet" href="css/style.css">
+
+<style>
+/* ================= HERO ================= */
+.hero {
+    background-image: url('imagens/Geography_edited.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-conteudo h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-conteudo p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.btn-acao {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-acao:hover {
+    background: #1ebe57;
+}
+
+/* ================= CARDS DE SERVIÇOS ================= */
+.servicos {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+    flex-wrap: wrap; /* permite quebrar linha apenas se não couber */
+    gap: 20px;       /* espaço entre cards */
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards por linha com espaço */
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 220px; /* evita que encolha demais */
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card a {
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.card a:hover {
+    background: #1ebe57;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* ================= SEÇÃO DE BOAS-VINDAS ================= */
+section.boas-vindas h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section.boas-vindas p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #1c1c1c;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* ================= RESPONSIVO ================= */
+@media screen and (max-width: 1000px) {
+    .card {
+        flex: 1 1 calc(48% - 20px); /* 2 cards por linha */
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .card {
+        flex: 1 1 100%; /* 1 card por linha */
+    }
+    
+    .hero {
+        height: 400px; /* Hero menor em telas pequenas */
+    }
+    
+    .hero-conteudo h1 {
+        font-size: 36px;
+    }
+    
+    .hero-conteudo p {
+        font-size: 16px;
+    }
+}
+</style>
+
 </head>
 <body class="home">
 
@@ -59,28 +203,19 @@
 
         <div class="card">
             <h3>Aulas Particulares</h3>
-            <p>
-                Aulas online personalizadas de História, focadas em compreensão,
-                contextualização e aprendizado significativo.
-            </p>
+            <p>Aulas online personalizadas de História, focadas em compreensão, contextualização e aprendizado significativo.</p>
             <a href="servicos-aulas.html">Saiba mais</a>
         </div>
 
         <div class="card">
             <h3>Reforço Escolar & ENEM</h3>
-            <p>
-                Apoio estratégico para provas, recuperação escolar e preparação
-                completa para o ENEM.
-            </p>
+            <p>Apoio estratégico para provas, recuperação escolar e preparação completa para o ENEM.</p>
             <a href="servicos-reforco.html">Saiba mais</a>
         </div>
 
         <div class="card">
             <h3>Consultoria Acadêmica</h3>
-            <p>
-                Orientação para pesquisas, TCCs e aprofundamento acadêmico
-                em História.
-            </p>
+            <p>Orientação para pesquisas, TCCs e aprofundamento acadêmico em História.</p>
             <a href="servicos-consultoria.html">Saiba mais</a>
         </div>
 
@@ -88,16 +223,18 @@
 </section>
 
 <!-- ================= BOAS-VINDAS ================= -->
-<section>
-    <h2 style="text-align:center; font-size:36px; margin-bottom:20px;">
-        Ensino de História de Forma Clara e Estratégica
-    </h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-        Nosso objetivo é oferecer aprendizado significativo, contextualização histórica e apoio acadêmico
-        completo para estudantes do Ensino Fundamental, Médio e ENEM.
-    </p>
+<section class="boas-vindas">
+    <h2>Ensino de História de Forma Clara e Estratégica</h2>
+    <p>Nosso objetivo é oferecer aprendizado significativo, contextualização histórica e apoio acadêmico completo para estudantes do Ensino Fundamental, Médio e ENEM.</p>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
-    <p>&copy; 2026 Escotilha do Tempo. Tod
+    <p>&copy; 2026 Escotilha do Tempo. Todos os direitos reservados.</p>
+</footer>
+
+<!-- ================= MENU INTELIGENTE ================= -->
+<script src="js/menu.js"></script>
+
+</body>
+</html>
