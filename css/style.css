@@ -149,3 +149,24 @@ footer {
     margin-bottom: 22px;
     text-align: justify;       /* TEXTO JUSTIFICADO */
 }
+
+/* ================= SERVIÇOS - TEXTO JUSTIFICADO ================= */
+.conteudo-servico {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.conteudo-servico h1 {
+    text-align: left;
+}
+
+.conteudo-servico p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Botão não justificado */
+.botao-servico {
+    text-align: left;
+    margin-top: 30px;
+}
