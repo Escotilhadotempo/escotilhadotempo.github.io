@@ -56,30 +56,32 @@
     max-width: 1000px;
     margin: 0 auto 80px;
     padding: 0 20px;
-    flex-wrap: wrap; /* permite quebrar linha apenas se não couber */
-    gap: 20px;       /* espaço entre cards */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
-    flex: 1 1 calc(33.333% - 20px); /* 3 cards por linha com espaço */
+    flex: 1 1 calc(33.333% - 20px);
     background: rgba(0,0,0,0.7);
     color: #fff;
     padding: 20px;
     border-radius: 12px;
-    text-align: center;
+    text-align: justify; /* texto justificado */
     box-shadow: 0 8px 24px rgba(0,0,0,0.3);
     transition: transform 0.3s, box-shadow 0.3s;
-    min-width: 220px; /* evita que encolha demais */
+    min-width: 220px;
 }
 
 .card h3 {
     font-size: 22px;
     margin-bottom: 10px;
+    text-align: justify; /* título justificado */
 }
 
 .card p {
     font-size: 16px;
     margin-bottom: 15px;
+    text-align: justify;
 }
 
 .card a {
@@ -100,6 +102,56 @@
 .card:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* ================= MURAL DE PERÍODOS HISTÓRICOS ================= */
+.mural-periodos {
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.periodo-card {
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.periodo-card .periodo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1); /* espaço para imagem futura */
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.periodo-card h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.periodo-card p {
+    margin: 0 0 10px;
+}
+
+.periodo-card a {
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.periodo-card a:hover {
+    background: #1ebe57;
 }
 
 /* ================= SEÇÃO DE BOAS-VINDAS ================= */
@@ -127,17 +179,27 @@ footer {
 /* ================= RESPONSIVO ================= */
 @media screen and (max-width: 1000px) {
     .card {
-        flex: 1 1 calc(48% - 20px); /* 2 cards por linha */
+        flex: 1 1 calc(48% - 20px);
+    }
+    
+    .periodo-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .periodo-card .periodo-img {
+        margin-bottom: 15px;
+        margin-right: 0;
     }
 }
 
 @media screen and (max-width: 680px) {
     .card {
-        flex: 1 1 100%; /* 1 card por linha */
+        flex: 1 1 100%;
     }
     
     .hero {
-        height: 400px; /* Hero menor em telas pequenas */
+        height: 400px;
     }
     
     .hero-conteudo h1 {
@@ -220,6 +282,39 @@ footer {
         </div>
 
     </div>
+</section>
+
+<!-- ================= MURAL DE PERÍODOS HISTÓRICOS ================= -->
+<section class="mural-periodos">
+    <h2 style="text-align:center; font-size:36px; margin-bottom:40px;">Períodos Históricos</h2>
+
+    <div class="periodo-card">
+        <div class="periodo-img"></div>
+        <div class="periodo-texto">
+            <h3>Pré-História</h3>
+            <p>Exploração da origem e evolução da humanidade, desde os primeiros hominídeos até o surgimento das primeiras civilizações.</p>
+            <a href="prehistoria.html">Saiba mais</a>
+        </div>
+    </div>
+
+    <div class="periodo-card">
+        <div class="periodo-img"></div>
+        <div class="periodo-texto">
+            <h3>Antiguidade Oriental</h3>
+            <p>Estudo das antigas civilizações do Oriente, como Mesopotâmia, Egito, Pérsia e Índia.</p>
+            <a href="antiguidade_oriental.html">Saiba mais</a>
+        </div>
+    </div>
+
+    <div class="periodo-card">
+        <div class="periodo-img"></div>
+        <div class="periodo-texto">
+            <h3>Antiguidade Clássica</h3>
+            <p>Análise das civilizações grega e romana, suas culturas, política, filosofia e legado histórico.</p>
+            <a href="antiguidade_classica.html">Saiba mais</a>
+        </div>
+    </div>
+
 </section>
 
 <!-- ================= BOAS-VINDAS ================= -->
