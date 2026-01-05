@@ -22,6 +22,7 @@ body {
     z-index: 1000;
     transition: transform 0.3s ease;
 }
+
 /* ================= CARD DE CONTEÚDO ================= */
 .card-conteudo {
     background: #ffffff;
@@ -29,6 +30,7 @@ body {
     padding: 40px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
+
 /* Classe usada pelo JS para esconder o menu */
 .menu-hide {
     transform: translateY(-100%);
@@ -129,28 +131,28 @@ footer {
     padding: 30px;
     margin-top: 80px;
 }
-/* ================= CONTEÚDO HISTÓRICO (PADRÃO DEFINITIVO) ================= */
 
+/* ================= CONTEÚDO HISTÓRICO ================= */
 .conteudo-historico {
-    max-width: 780px;          /* largura confortável de leitura (igual à imagem) */
-    margin: 0 auto;            /* centraliza o bloco na página */
+    max-width: 780px;
+    margin: 0 auto;
 }
 
 .conteudo-historico h1 {
     font-family: Georgia, serif;
     font-size: 42px;
     margin-bottom: 30px;
-    text-align: left;          /* título alinhado à esquerda */
+    text-align: left;
 }
 
 .conteudo-historico p {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 22px;
-    text-align: justify;       /* TEXTO JUSTIFICADO */
+    text-align: justify;
 }
 
-/* ================= SERVIÇOS - TEXTO JUSTIFICADO ================= */
+/* ================= SERVIÇOS ================= */
 .conteudo-servico {
     max-width: 800px;
     margin: 0 auto;
@@ -165,11 +167,45 @@ footer {
     text-justify: inter-word;
 }
 
-/* Botão não justificado */
 .botao-servico {
     text-align: left;
     margin-top: 30px;
 }
+
+/* ================= HERO - PÁGINA INICIAL ================= */
 .hero {
     background-image: url('../imagens/Geography_edited.jpg');
-    /* resto do CSS */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-conteudo h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-conteudo p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-acao {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-acao:hover {
+    background-color: #e55b00;
+}
