@@ -1,5 +1,3 @@
-
-
 /* ================= RESET ================= */
 * {
     margin: 0;
@@ -228,11 +226,13 @@ footer {
 .card h3 {
     font-size: 26px;
     margin-bottom: 15px;
+    text-align: justify; /* título justificado */
 }
 
 .card p {
     margin-bottom: 20px;
     line-height: 1.6;
+    text-align: justify; /* texto justificado */
 }
 
 .card a {
@@ -253,4 +253,89 @@ footer {
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* ================= MURAL - PERÍODOS HISTÓRICOS ================= */
+.mural-periodos {
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.periodo-card {
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.periodo-card .periodo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1); /* espaço para imagem futura */
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.periodo-card h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+}
+
+.periodo-card p {
+    margin: 0 0 10px;
+}
+
+.periodo-card a {
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.periodo-card a:hover {
+    background: #1ebe57;
+}
+
+/* ================= RESPONSIVO ================= */
+@media screen and (max-width: 1000px) {
+    .card {
+        flex: 1 1 calc(48% - 20px);
+    }
+    
+    .periodo-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .periodo-card .periodo-img {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .card {
+        flex: 1 1 100%;
+    }
+    
+    .hero {
+        height: 400px;
+    }
+    
+    .hero-conteudo h1 {
+        font-size: 36px;
+    }
+    
+    .hero-conteudo p {
+        font-size: 16px;
+    }
 }
