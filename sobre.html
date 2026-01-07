@@ -94,9 +94,38 @@
         <p>Tire suas dúvidas, solicite informações ou agende uma aula particular. Escolha o canal que preferir — estou disponível por WhatsApp, Instagram e e-mail.</p>
         <p>Você também pode enviar sua mensagem diretamente pelo formulário abaixo.</p>
     </div>
+    <!-- ================= QUARTO CARD – FORMULÁRIO ================= -->
+   <div class="card" style="background:#F4E4C1; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); color:black; line-height:1.7;">
+    <h2 style="margin-top:0;">Envie sua Mensagem</h2>
+    <p>Preencha os campos abaixo e entrarei em contato com você o mais breve possível.</p>
+    
+    <form action="#" method="post" style="display:flex; flex-direction:column; gap:15px;">
+        <!-- Nome -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required style="padding:10px; border-radius:6px; border:1px solid #ccc; font-family: 'Open Sans', sans-serif;">
 
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Seu email" required style="padding:10px; border-radius:6px; border:1px solid #ccc; font-family: 'Open Sans', sans-serif;">
+
+        <!-- Mensagem -->
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" rows="5" required style="padding:10px; border-radius:6px; border:1px solid #ccc; font-family: 'Open Sans', sans-serif;"></textarea>
+
+        <!-- Botão enviar -->
+        <button type="submit" style="
+            padding:10px 20px;
+            background-color:#5B4636;
+            color:white;
+            border:none;
+            border-radius:6px;
+            font-weight:bold;
+            cursor:pointer;
+            font-family: 'Open Sans', sans-serif;
+        ">Enviar</button>
+     </form>
+  </div>
 </div>
-
 <!-- ================= FOOTER ================= -->
 <footer>
     © 2026 Escotilha do Tempo
