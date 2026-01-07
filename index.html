@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <title>Escotilha do Tempo</title>
 
+<!-- ================= CSS EXTERNO ================= -->
 <link rel="stylesheet" href="css/style.css">
 
 <style>
@@ -18,6 +20,7 @@
     align-items: center;
     text-align: center;
     color: #fff;
+    position: relative;
 }
 
 .hero-conteudo h1 {
@@ -39,28 +42,70 @@
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
+    transition: background 0.3s;
 }
 
-/* ================= SERVIÇOS ================= */
+.btn-acao:hover {
+    background: #1ebe57;
+}
+
+/* ================= CARDS DE SERVIÇOS ================= */
 .servicos {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: stretch;
     max-width: 1000px;
     margin: 0 auto 80px;
     padding: 0 20px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
-    flex: 1 1 30%;
+    flex: 1 1 calc(33.333% - 20px);
     background: rgba(0,0,0,0.7);
     color: #fff;
     padding: 20px;
     border-radius: 12px;
+    text-align: justify; /* texto justificado */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    min-width: 220px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: justify; /* título justificado */
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 15px;
     text-align: justify;
 }
 
-/* ================= MURAL ================= */
+.card a {
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.card a:hover {
+    background: #1ebe57;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* ================= MURAL DE PERÍODOS HISTÓRICOS ================= */
 .mural-periodos {
     max-width: 1000px;
     margin: 0 auto 80px;
@@ -77,134 +122,215 @@
     margin-bottom: 20px;
 }
 
-.periodo-img {
+.periodo-card .periodo-img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    overflow: hidden;
+    background: rgba(255,255,255,0.1); /* espaço para imagem futura */
     margin-right: 20px;
+    flex-shrink: 0;
 }
 
-.periodo-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.periodo-card h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
 }
 
 .periodo-card p {
-    text-align: justify;
+    margin: 0 0 10px;
 }
 
+.periodo-card a {
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.periodo-card a:hover {
+    background: #1ebe57;
+}
+
+/* ================= SEÇÃO DE BOAS-VINDAS ================= */
+section.boas-vindas h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section.boas-vindas p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+/* ================= FOOTER ================= */
 footer {
     background: #1c1c1c;
     color: #fff;
     text-align: center;
     padding: 40px 20px;
 }
+
+/* ================= RESPONSIVO ================= */
+@media screen and (max-width: 1000px) {
+    .card {
+        flex: 1 1 calc(48% - 20px);
+    }
+    
+    .periodo-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .periodo-card .periodo-img {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .card {
+        flex: 1 1 100%;
+    }
+    
+    .hero {
+        height: 400px;
+    }
+    
+    .hero-conteudo h1 {
+        font-size: 36px;
+    }
+    
+    .hero-conteudo p {
+        font-size: 16px;
+    }
+}
 </style>
+
 </head>
+<body class="home">
 
-<body>
-
+<!-- ================= HEADER ================= -->
 <header class="topo">
-<nav>
-<ul>
-<li><a href="index.html">INÍCIO</a></li>
-<li>
-<a href="#">SERVIÇOS</a>
-<ul>
-<li><a href="servicos-aulas.html">Aulas Particulares</a></li>
-<li><a href="servicos-reforco.html">Reforço Escolar e ENEM</a></li>
-<li><a href="servicos-consultoria.html">Consultoria</a></li>
-</ul>
-</li>
-<li>
-<a href="#">PERÍODOS HISTÓRICOS</a>
-<ul>
-<li><a href="prehistoria.html">Pré-História</a></li>
-<li><a href="antiguidade_oriental.html">Antiguidade Oriental</a></li>
-<li><a href="antiguidade_classica.html">Antiguidade Clássica</a></li>
-</ul>
-</li>
-<li><a href="faq.html">Perguntas Frequentes</a></li>
-<li><a href="questoes.html">Questões Vestibulares</a></li>
-<li><a href="sobre.html">Sobre</a></li>
-</ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">INÍCIO</a></li>
+
+            <li>
+                <a href="#">SERVIÇOS</a>
+                <ul>
+                    <li><a href="servicos-aulas.html">Aulas Particulares</a></li>
+                    <li><a href="servicos-reforco.html">Reforço Escolar e ENEM</a></li>
+                    <li><a href="servicos-consultoria.html">Consultoria</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">PERÍODOS HISTÓRICOS</a>
+                <ul>
+                    <li><a href="prehistoria.html">Pré-História</a></li>
+                    <li><a href="antiguidade_oriental.html">Antiguidade Oriental</a></li>
+                    <li><a href="antiguidade_classica.html">Antiguidade Clássica</a></li>
+                </ul>
+            </li>
+
+            <li><a href="faq.html">Perguntas Frequentes</a></li>
+            <li><a href="questoes.html">Questões Vestibulares</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+    </nav>
 </header>
 
+<!-- ================= HERO ================= -->
 <section class="hero">
-<div class="hero-conteudo">
-<h1>Bem-vindo ao Escotilha do Tempo</h1>
-<p>Ensino crítico e acessível de História.</p>
-<a href="#servicos" class="btn-acao">Conheça Nossos Serviços</a>
-</div>
+    <div class="hero-conteudo">
+        <h1>Bem-vindo ao Escotilha do Tempo</h1>
+        <p>Um espaço dedicado ao ensino crítico e acessível de História, com aulas e conteúdos para todos os níveis.</p>
+        <a href="#servicos" class="btn-acao">Conheça Nossos Serviços</a>
+    </div>
 </section>
 
+<!-- ================= SERVIÇOS ================= -->
 <section id="servicos">
-<h2 style="text-align:center; font-size:36px; margin-bottom:40px;">Serviços Oferecidos</h2>
-<div class="servicos">
-<div class="card">
-<h3>Aulas Particulares</h3>
-<p>Aulas online personalizadas de História.</p>
-<a href="servicos-aulas.html">Saiba mais</a>
-</div>
+    <h2 style="text-align:center; font-size:36px; margin-bottom:40px;">
+        Serviços Oferecidos
+    </h2>
 
-<div class="card">
-<h3>Reforço Escolar & ENEM</h3>
-<p>Apoio estratégico para provas e ENEM.</p>
-<a href="servicos-reforco.html">Saiba mais</a>
-</div>
+    <div class="servicos">
 
-<div class="card">
-<h3>Consultoria Acadêmica</h3>
-<p>Orientação para TCCs e pesquisas.</p>
-<a href="servicos-consultoria.html">Saiba mais</a>
-</div>
-</div>
+        <div class="card">
+            <h3>Aulas Particulares</h3>
+            <p>Aulas online personalizadas de História, focadas em compreensão, contextualização e aprendizado significativo.</p>
+            <a href="servicos-aulas.html">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <h3>Reforço Escolar & ENEM</h3>
+            <p>Apoio estratégico para provas, recuperação escolar e preparação completa para o ENEM.</p>
+            <a href="servicos-reforco.html">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <h3>Consultoria Acadêmica</h3>
+            <p>Orientação para pesquisas, TCCs e aprofundamento acadêmico em História.</p>
+            <a href="servicos-consultoria.html">Saiba mais</a>
+        </div>
+
+    </div>
 </section>
 
+<!-- ================= MURAL DE PERÍODOS HISTÓRICOS ================= -->
 <section class="mural-periodos">
-<h2 style="text-align:center; font-size:36px; margin-bottom:40px;">Períodos Históricos</h2>
+    <h2 style="text-align:center; font-size:36px; margin-bottom:40px;">Períodos Históricos</h2>
 
-<div class="periodo-card">
-<div class="periodo-img">
-<img src="imagens/prehistoria.jpg" alt="Pré-História">
-</div>
-<div>
-<h3>Pré-História</h3>
-<p>Origem e evolução da humanidade.</p>
-<a href="prehistoria.html">Saiba mais</a>
-</div>
-</div>
+    <div class="periodo-card">
+        <div class="periodo-img"></div>
+        <div class="periodo-texto">
+            <h3>Pré-História</h3>
+            <p>Exploração da origem e evolução da humanidade, desde os primeiros hominídeos até o surgimento das primeiras civilizações.</p>
+            <a href="prehistoria.html">Saiba mais</a>
+        </div>
+    </div>
 
-<div class="periodo-card">
-<div class="periodo-img">
-<img src="imagens/antiguidadeoriental.jpg" alt="Antiguidade Oriental">
-</div>
-<div>
-<h3>Antiguidade Oriental</h3>
-<p>Egito, Mesopotâmia e Pérsia.</p>
-<a href="antiguidade_oriental.html">Saiba mais</a>
-</div>
-</div>
+    <div class="periodo-card">
+        <div class="periodo-img"></div>
+        <div class="periodo-texto">
+            <h3>Antiguidade Oriental</h3>
+            <p>Estudo das antigas civilizações do Oriente, como Mesopotâmia, Egito, Pérsia e Índia.</p>
+            <a href="antiguidade_oriental.html">Saiba mais</a>
+        </div>
+    </div>
 
-<div class="periodo-card">
-<div class="periodo-img">
-<img src="imagens/antiguidadeclassica.jpg" alt="Antiguidade Clássica">
-</div>
-<div>
-<h3>Antiguidade Clássica</h3>
-<p>Grécia e Roma Antigas.</p>
-<a href="antiguidade_classica.html">Saiba mais</a>
-</div>
-</div>
+    <div class="periodo-card">
+        <div class="periodo-img"></div>
+        <div class="periodo-texto">
+            <h3>Antiguidade Clássica</h3>
+            <p>Análise das civilizações grega e romana, suas culturas, política, filosofia e legado histórico.</p>
+            <a href="antiguidade_classica.html">Saiba mais</a>
+        </div>
+    </div>
+
 </section>
 
+<!-- ================= BOAS-VINDAS ================= -->
+<section class="boas-vindas">
+    <h2>Ensino de História de Forma Clara e Estratégica</h2>
+    <p>Nosso objetivo é oferecer aprendizado significativo, contextualização histórica e apoio acadêmico completo para estudantes do Ensino Fundamental, Médio e ENEM.</p>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer>
-<p>&copy; 2026 Escotilha do Tempo</p>
+    <p>&copy; 2026 Escotilha do Tempo. Todos os direitos reservados.</p>
 </footer>
 
+<!-- ================= MENU INTELIGENTE ================= -->
 <script src="js/menu.js"></script>
+
 </body>
 </html>
